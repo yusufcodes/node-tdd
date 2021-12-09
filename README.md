@@ -8,7 +8,11 @@ Practice repo for using Test Driven Development in a basic Node & Express app
 2) Start implementing the code until the test passes - as simple as possible
 3) Refactor to improve the code
 
-## Tests to practice in this app
-- GET: getting all TODOs
-- GET: getting TODO by specific ID
-- POST: creating a TODO
+This app mocks a basic 'To Do List' api as an example to practice TDD with.
+
+## Testing Tools
+- Supertest: to be able to make test requests to the API
+- Jest: writing test assertions
+
+## Links
+- [Difference between Mocha and Jest](https://www.merixstudio.com/blog/mocha-vs-jest/)
