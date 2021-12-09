@@ -40,19 +40,18 @@ describe("TODOs API", () => {
     return request(app).get("/todos/9999").expect(404);
   });
 
-  it("POST /todos -> create new todo", () => {
+  it("POST /todos -> create new todo with an ID of 2", () => {
     return request(app)
       .post("/todos")
       .send({
         name: "clean room",
-        completed: false,
       })
       .expect("Content-Type", /json/)
       .expect(201)
       .then((response) => {
         expect(response.body).toEqual(
           expect.objectContaining({
-            id: expect.any(String),
+            id: 2,
             name: "clean room",
             completed: false,
           })
