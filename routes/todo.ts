@@ -1,9 +1,17 @@
 const express = require("express");
 const router = express.Router();
 
-/* GET home page. */
+const todos = [
+  {
+    id: 1,
+    name: "clean room",
+    completed: false,
+  },
+];
+
+// GET: /todos
 router.get("/", function (req, res, next) {
-  res.send("Hello World");
+  res.json(todos);
 });
 
 module.exports = router;
